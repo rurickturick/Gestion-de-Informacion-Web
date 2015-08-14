@@ -1,0 +1,216 @@
+<Direcciones>{
+    
+    <Direccion>{
+    let $nombre:=doc('complutense.xml')//address_component[type='establishment']
+    let $aux:=doc('complutense.xml')//address_component[type='locality']
+    return concat(replace(data($nombre/long_name), 'Facultad de Derecho', 'de '), data($aux/long_name))}
+    
+        <Pais>{
+        let $pais:=doc('complutense.xml')//address_component[type='country']
+        return data($pais/long_name)}
+        </Pais>
+        
+        <Ciudad>{
+        let $ciudad:=doc('complutense.xml')//address_component[type='locality']
+        return data($ciudad/long_name)}
+        </Ciudad>
+        
+        <Codigo_Postal>{
+        let $cod:=doc('complutense.xml')//address_component[type='postal_code']
+        return data($cod/long_name)}
+        </Codigo_Postal>
+        
+    </Direccion>
+}
+    <Direccion>{
+    let $nombre:=doc('zaragoza.xml')//address_component[type='neighborhood']
+    let $uni:=doc('zaragoza.xml')//address_component[type='locality']
+    return concat(data($nombre/long_name),' de ',data($uni/long_name))}
+    
+    <Pais>{
+        let $pais:=doc('zaragoza.xml')//address_component[type='country']
+        return data($pais/long_name)}
+        </Pais>
+        
+        <Ciudad>{
+        let $ciudad:=doc('zaragoza.xml')//address_component[type='locality']
+        return data($ciudad/long_name)}
+        </Ciudad>
+        
+        <Codigo_Postal>{
+        let $cod:=doc('zaragoza.xml')//address_component[type='postal_code']
+        return data($cod/long_name)}
+        </Codigo_Postal>
+        
+    </Direccion>
+
+</Direcciones>    
+#
+<Coordenadas>{
+    
+    <Universidad>
+    
+        <Nombre>{
+        let $nombre:=doc('zaragoza.xml')//address_component[type='neighborhood']
+        let $uni:=doc('zaragoza.xml')//address_component[type='locality']
+        return concat(data($nombre/long_name),' de ',data($uni/long_name))}
+        </Nombre>
+        
+        <Latitud>{
+        let $lat:=doc('zaragoza.xml')//geometry/location/lat
+        return data($lat)}
+        </Latitud>
+        
+        <Longitud>{
+        let $lon:=doc('zaragoza.xml')//geometry/location/lng
+        return data($lon)}
+        </Longitud>
+        
+    </Universidad>
+}
+    <Universidad>
+    
+        <Nombre>{
+        let $nombre:=doc('complutense.xml')//address_component[type='establishment']
+        let $aux:=doc('complutense.xml')//address_component[type='locality']
+        return concat(replace(data($nombre/long_name), 'Facultad de Derecho', 'de '), data($aux/long_name))}
+        </Nombre>
+        
+        <Latitud>{
+        let $lat:=doc('complutense.xml')//geometry/location/lat
+        return data($lat)}
+        </Latitud>
+        
+        <Longitud>{
+        let $lon:=doc('complutense.xml')//geometry/location/lng
+        return data($lon)}
+        </Longitud>
+        
+    </Universidad>
+
+</Coordenadas>    
+#
+<Infor_admin>{
+    
+    <Universidad>{
+    let $nombre:=doc('complutense.xml')//address_component[type='establishment']
+    let $aux:=doc('complutense.xml')//address_component[type='locality']
+    return <Nombre>{concat(replace(data($nombre/long_name), 'Facultad de Derecho', 'de '), data($aux/long_name))}</Nombre>}
+    
+        <Nivel1>{
+        let $l1:=doc('complutense.xml')//address_component[type='administrative_area_level_1']
+        return data($l1/long_name)}
+        </Nivel1>
+        
+        <Nivel2>{
+        let $l2:=doc('complutense.xml')//address_component[type='administrative_area_level_2']
+        return data($l2/long_name)}
+        </Nivel2>
+        
+        <Nivel3>{
+        let $l3:=doc('complutense.xml')//address_component[type='administrative_area_level_3']
+        return  if (count($l3) != 0)
+            then data($l3/long_name)
+            else 'No consta'
+        }
+        </Nivel3>
+        
+        <Nivel4>{
+        let $l4:=doc('complutense.xml')//address_component[type='administrative_area_level_4']
+        return if (count($l4) != 0)
+            then data($l4/long_name)
+            else 'No consta'
+            
+        }
+        </Nivel4>
+        
+    </Universidad>
+}
+    <Universidad>{
+    let $nombre:=doc('zaragoza.xml')//address_component[type='neighborhood']
+    let $uni:=doc('zaragoza.xml')//address_component[type='locality']
+    return <Nombre>{concat(data($nombre/long_name),' de ',data($uni/long_name))}</Nombre>}
+    
+        <Nivel1>{
+        let $l1:=doc('zaragoza.xml')//address_component[type='administrative_area_level_1']
+        return data($l1/long_name)}
+        </Nivel1>
+        
+        <Nivel2>{
+        let $l2:=doc('zaragoza.xml')//address_component[type='administrative_area_level_2']
+        return data($l2/long_name)}
+        </Nivel2>
+        
+        <Nivel3>{
+        let $l3:=doc('zaragoza.xml')//address_component[type='administrative_area_level_3']
+        return data($l3/long_name)}
+        </Nivel3>
+        
+        <Nivel4>{
+        let $l4:=doc('zaragoza.xml')//address_component[type='administrative_area_level_4']
+        return data($l4/long_name)}
+        </Nivel4>
+        
+    </Universidad>
+
+</Infor_admin> 
+#
+<Agrega>{
+    
+    <Universidad>
+    
+        <Nombre>{
+        let $nombre:=doc('zaragoza.xml')//address_component[type='neighborhood']
+        let $uni:=doc('zaragoza.xml')//address_component[type='locality']
+        return concat(data($nombre/long_name),' de ',data($uni/long_name))}
+        </Nombre>
+        
+        <Tipo>{
+        let $tipo1:=doc('zaragoza.xml')//result
+        return $tipo1/type}
+        </Tipo>
+        
+        <Num_nodos_address>{
+        let $num:=doc('zaragoza.xml')//address_component
+        return count(data($num))}
+        </Num_nodos_address>
+        
+    </Universidad>
+}
+    <Universidad>
+    
+        <Nombre>{
+        let $nombre:=doc('complutense.xml')//address_component[type='establishment']
+        let $aux:=doc('complutense.xml')//address_component[type='locality']
+        return concat(replace(data($nombre/long_name), 'Facultad de Derecho', 'de '), data($aux/long_name))}
+        </Nombre>
+        
+        <Tipo>{
+        let $tipo1:=doc('complutense.xml')//result
+        return $tipo1/type}
+        </Tipo>
+        
+        <Num_nodos_address>{
+        let $num:=doc('complutense.xml')//address_component
+        return count(data($num))}
+        </Num_nodos_address>
+        
+    </Universidad>
+
+</Agrega>    
+#
+declare function local:ConvertirCoordenadas($x1 as xs:double, $y1 as xs:double, $x2 as xs:double, $y2 as xs:double) as xs:double
+{
+    fn:round-half-to-even(math:sqrt((($x2 - $x1) * ($x2 - $x1))+ (($y2 - $y1) * ($y2 - $y1))),2)
+};
+let $lat1:=doc('zaragoza.xml')//geometry/location/lat
+    let $lon1:=doc('zaragoza.xml')//geometry/location/lng
+    let $lat2:=doc('complutense.xml')//geometry/location/lat
+    let $lon2:=doc('complutense.xml')//geometry/location/lng
+    let $x1:=(number($lat1)*10000) div 90
+    let $y1:=(number($lon1)*111.1111)
+    let $x2:=(number($lat2)*10000) div 90
+    let $y2:=(number($lon2)*111.1111)
+    let $d :=local:ConvertirCoordenadas($x1,$y1,$x2,$y2)
+    return concat("La distancia entre las dos universidades es: " , $d," Km") 
+#

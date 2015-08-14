@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeocodeResponse>
+ <status>OK</status>
+ <result>
+  <type>university</type>
+  <type>establishment</type>
+  <formatted_address>Universidad Complutense Facultad de Derecho, 28040 Madrid, Madrid</formatted_address>
+  <address_component>
+   <long_name>Universidad Complutense Facultad de Derecho</long_name>
+   <short_name>Univ. Complutense Facultad de Derecho</short_name>
+   <type>establishment</type>
+  </address_component>
+  <address_component>
+   <long_name>Madrid</long_name>
+   <short_name>Madrid</short_name>
+   <type>locality</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Madrid</long_name>
+   <short_name>Madrid</short_name>
+   <type>administrative_area_level_2</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Comunidad de Madrid</long_name>
+   <short_name>Comunidad de Madrid</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>España</long_name>
+   <short_name>ES</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>28040</long_name>
+   <short_name>28040</short_name>
+   <type>postal_code</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>40.4505410</lat>
+    <lng>-3.7306943</lng>
+   </location>
+   <location_type>APPROXIMATE</location_type>
+   <viewport>
+    <southwest>
+     <lat>40.4491920</lat>
+     <lng>-3.7322378</lng>
+    </southwest>
+    <northeast>
+     <lat>40.4518900</lat>
+     <lng>-3.7291507</lng>
+    </northeast>
+   </viewport>
+   <bounds>
+    <southwest>
+     <lat>40.4492093</lat>
+     <lng>-3.7322378</lng>
+    </southwest>
+    <northeast>
+     <lat>40.4518727</lat>
+     <lng>-3.7291507</lng>
+    </northeast>
+   </bounds>
+  </geometry>
+  <partial_match>true</partial_match>
+ </result>
+</GeocodeResponse>

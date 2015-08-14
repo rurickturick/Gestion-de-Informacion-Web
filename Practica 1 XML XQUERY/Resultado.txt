@@ -1,0 +1,64 @@
+RESULTADOS CONSULTAS XQUERY
+==========================
+-----------------CONSULTA 1----------------------------:
+<Direcciones>
+    <Direccion>Universidad Complutense de Madrid<Pais>Espa�a</Pais>
+        <Ciudad>Madrid</Ciudad>
+        <Codigo_Postal>28040</Codigo_Postal>
+    </Direccion>
+    <Direccion>Universidad de Zaragoza<Pais>Espa�a</Pais>
+        <Ciudad>Zaragoza</Ciudad>
+        <Codigo_Postal>50009</Codigo_Postal>
+    </Direccion>
+</Direcciones>
+-----------------CONSULTA 2----------------------------:
+<Coordenadas>
+    <Universidad>
+        <Nombre>Universidad de Zaragoza</Nombre>
+        <Latitud>41.6424742</Latitud>
+        <Longitud>-0.9057506</Longitud>
+    </Universidad>
+    <Universidad>
+        <Nombre>Universidad Complutense de Madrid</Nombre>
+        <Latitud>40.4505410</Latitud>
+        <Longitud>-3.7306943</Longitud>
+    </Universidad>
+</Coordenadas>
+-----------------CONSULTA 3----------------------------:
+<Infor_admin>
+    <Universidad>
+        <Nombre>Universidad Complutense de Madrid</Nombre>
+        <Nivel1>Comunidad de Madrid</Nivel1>
+        <Nivel2>Madrid</Nivel2>
+        <Nivel3>No consta</Nivel3>
+        <Nivel4>No consta</Nivel4>
+    </Universidad>
+    <Universidad>
+        <Nombre>Universidad de Zaragoza</Nombre>
+        <Nivel1>Arag�n</Nivel1>
+        <Nivel2>Zaragoza</Nivel2>
+        <Nivel3>Zaragoza</Nivel3>
+        <Nivel4>Zaragoza</Nivel4>
+    </Universidad>
+</Infor_admin>
+-----------------CONSULTA 4----------------------------:
+<Agrega>
+    <Universidad>
+        <Nombre>Universidad de Zaragoza</Nombre>
+        <Tipo>
+            <type>neighborhood</type>
+            <type>political</type>
+        </Tipo>
+        <Num_nodos_address>8</Num_nodos_address>
+    </Universidad>
+    <Universidad>
+        <Nombre>Universidad Complutense de Madrid</Nombre>
+        <Tipo>
+            <type>university</type>
+            <type>establishment</type>
+        </Tipo>
+        <Num_nodos_address>6</Num_nodos_address>
+    </Universidad>
+</Agrega>
+-----------------CONSULTA 5----------------------------:
+La distancia entre las dos universidades es: 340.68 Km

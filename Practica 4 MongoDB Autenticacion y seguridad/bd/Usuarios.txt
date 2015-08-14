@@ -1,0 +1,7 @@
+Administrador: login: angel
+		pass: angel
+Usuarios:
+		login:claudia
+		pass:claudia
+		login:oscar
+		pass:oscar
